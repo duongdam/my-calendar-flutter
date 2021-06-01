@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final List<Meeting> meetings = <Meeting>[];
     final DateTime today = DateTime.now();
     final DateTime startTime =
-        DateTime(today.year, today.month, today.day, 19, 0, 0);
+        DateTime(today.year, today.month, today.day, 12, 0, 0);
     final DateTime endTime = startTime.add(const Duration(hours: 2));
     meetings.add(Meeting('TEST', startTime, endTime, const Color(0xFFE80F0F),
         false, 'FREQ=DAILY;INTERVAL=2;COUNT=20'));
