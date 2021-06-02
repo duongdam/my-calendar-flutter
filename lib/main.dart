@@ -8,6 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +34,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -43,7 +43,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Right to Left'),
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+        elevation: 0.0,
+        automaticallyImplyLeading: false,
+        title: Text('REMIND ME', style: TextStyle(color: Colors.white)),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: () => null,
+          ),
+          IconButton(
+            icon: Icon(Icons.person),
+            onPressed: () => null,
+          ),
+        ],
+        centerTitle: true,
       ),
       body: SafeArea(
         child: Directionality(
